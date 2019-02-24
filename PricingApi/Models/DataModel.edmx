@@ -1,0 +1,1083 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Pricing_DEVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Approval">
+          <Key>
+            <PropertyRef Name="aid" />
+          </Key>
+          <Property Name="aid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FormType" Type="varchar" MaxLength="50" />
+          <Property Name="NumApprovals" Type="int" Nullable="false" />
+          <Property Name="Approver1" Type="varchar" MaxLength="200" />
+          <Property Name="Approver2" Type="varchar" MaxLength="200" />
+          <Property Name="Approver3" Type="varchar" MaxLength="200" />
+          <Property Name="Approver4" Type="varchar" MaxLength="200" />
+          <Property Name="Approver5" Type="varchar" MaxLength="200" />
+          <Property Name="Approver6" Type="varchar" MaxLength="200" />
+          <Property Name="Approver7" Type="varchar" MaxLength="200" />
+          <Property Name="Approver8" Type="varchar" MaxLength="200" />
+          <Property Name="Approver9" Type="varchar" MaxLength="200" />
+          <Property Name="Approver10" Type="varchar" MaxLength="200" />
+          <Property Name="Copy1" Type="varchar" MaxLength="400" />
+          <Property Name="Copy2" Type="varchar" MaxLength="400" />
+          <Property Name="Copy3" Type="varchar" MaxLength="400" />
+          <Property Name="Copy4" Type="varchar" MaxLength="400" />
+          <Property Name="Copy5" Type="varchar" MaxLength="400" />
+          <Property Name="Copy6" Type="varchar" MaxLength="400" />
+          <Property Name="Copy7" Type="varchar" MaxLength="400" />
+          <Property Name="Copy8" Type="varchar" MaxLength="400" />
+          <Property Name="Copy9" Type="varchar" MaxLength="400" />
+          <Property Name="Copy10" Type="varchar" MaxLength="400" />
+          <Property Name="ApprovalSendTo" Type="varchar" MaxLength="400" />
+          <Property Name="FormTypeName" Type="varchar" MaxLength="50" />
+          <Property Name="Territory" Type="varchar" MaxLength="50" />
+          <Property Name="ApproverTitle1" Type="varchar" MaxLength="50" />
+          <Property Name="ApproverTitle2" Type="varchar" MaxLength="50" />
+          <Property Name="ApproverTitle3" Type="varchar" MaxLength="50" />
+          <Property Name="ApproverTitle4" Type="varchar" MaxLength="50" />
+          <Property Name="ApproverTitle5" Type="varchar" MaxLength="50" />
+          <Property Name="ApproverTitle6" Type="varchar" MaxLength="50" />
+          <Property Name="ApproverTitle7" Type="varchar" MaxLength="50" />
+          <Property Name="ApproverTitle8" Type="varchar" MaxLength="50" />
+          <Property Name="ApproverTitle9" Type="varchar" MaxLength="50" />
+          <Property Name="ApproverTitle10" Type="varchar" MaxLength="50" />
+          <Property Name="ApproverEmail1" Type="varchar" MaxLength="100" />
+          <Property Name="ApproverEmail2" Type="varchar" MaxLength="100" />
+          <Property Name="ApproverEmail3" Type="varchar" MaxLength="100" />
+          <Property Name="ApproverEmail4" Type="varchar" MaxLength="100" />
+          <Property Name="ApproverEmail5" Type="varchar" MaxLength="100" />
+          <Property Name="ApproverEmail6" Type="varchar" MaxLength="100" />
+          <Property Name="ApproverEmail7" Type="varchar" MaxLength="100" />
+          <Property Name="ApproverEmail8" Type="varchar" MaxLength="100" />
+          <Property Name="ApproverEmail9" Type="varchar" MaxLength="100" />
+          <Property Name="ApproverEmail10" Type="varchar" MaxLength="100" />
+          <Property Name="CopyEmail1" Type="varchar" MaxLength="400" />
+          <Property Name="CopyEmail2" Type="varchar" MaxLength="400" />
+          <Property Name="CopyEmail3" Type="varchar" MaxLength="400" />
+          <Property Name="CopyEmail4" Type="varchar" MaxLength="400" />
+          <Property Name="CopyEmail5" Type="varchar" MaxLength="400" />
+          <Property Name="CopyEmail6" Type="varchar" MaxLength="400" />
+          <Property Name="CopyEmail7" Type="varchar" MaxLength="400" />
+          <Property Name="CopyEmail8" Type="varchar" MaxLength="400" />
+          <Property Name="CopyEmail9" Type="varchar" MaxLength="400" />
+          <Property Name="CopyEmail10" Type="varchar" MaxLength="400" />
+          <Property Name="Approver0" Type="varchar" MaxLength="200" />
+          <Property Name="ApproverTitle0" Type="varchar" MaxLength="50" />
+          <Property Name="ApproverEmail0" Type="varchar" MaxLength="100" />
+          <Property Name="Copy0" Type="varchar" MaxLength="400" />
+          <Property Name="CopyEmail0" Type="varchar" MaxLength="400" />
+          <Property Name="ApprovalSendToEmail" Type="varchar" MaxLength="400" />
+        </EntityType>
+        <EntityType Name="FR_Form">
+          <Key>
+            <PropertyRef Name="fzid" />
+          </Key>
+          <Property Name="fzid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FormType" Type="varchar" MaxLength="50" />
+          <Property Name="Created" Type="datetime" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="Status" Type="varchar" MaxLength="100" />
+          <Property Name="StatusNumber" Type="int" />
+          <Property Name="Representative" Type="varchar" MaxLength="50" />
+          <Property Name="Region" Type="varchar" MaxLength="50" />
+          <Property Name="HospitalReq" Type="varchar" MaxLength="50" />
+          <Property Name="AccountNumberReq" Type="varchar" MaxLength="50" />
+          <Property Name="CityReq" Type="varchar" MaxLength="50" />
+          <Property Name="StateReq" Type="varchar" MaxLength="50" />
+          <Property Name="ZipReq" Type="varchar" MaxLength="50" />
+          <Property Name="ContactName" Type="varchar" MaxLength="50" />
+          <Property Name="ContactPhone" Type="varchar" MaxLength="50" />
+          <Property Name="SameHospAddr" Type="varchar" MaxLength="50" />
+          <Property Name="HospitalShip" Type="varchar" MaxLength="50" />
+          <Property Name="AccountNumberShip" Type="varchar" MaxLength="50" />
+          <Property Name="CityShip" Type="varchar" MaxLength="50" />
+          <Property Name="StateShip" Type="varchar" MaxLength="50" />
+          <Property Name="ZipShip" Type="varchar" MaxLength="50" />
+          <Property Name="FreezerType" Type="varchar" MaxLength="50" />
+          <Property Name="FreezerTypeOther" Type="varchar" MaxLength="50" />
+          <Property Name="ReqArrivalDate" Type="date" />
+          <Property Name="PONumber" Type="varchar" MaxLength="50" />
+          <Property Name="Readers" Type="varchar" MaxLength="2000" />
+          <Property Name="Completed" Type="datetime" />
+          <Property Name="FormNumber" Type="varchar" MaxLength="50" />
+          <Property Name="Address1Req" Type="varchar" MaxLength="100" />
+          <Property Name="Address2Req" Type="varchar" MaxLength="100" />
+          <Property Name="Address1Ship" Type="varchar" MaxLength="100" />
+          <Property Name="Address2Ship" Type="varchar" MaxLength="100" />
+          <Property Name="CountryReq" Type="varchar" MaxLength="100" />
+          <Property Name="CountryShip" Type="varchar" MaxLength="100" />
+          <Property Name="CountryOtherReq" Type="varchar" MaxLength="100" />
+          <Property Name="CountryOtherShip" Type="varchar" MaxLength="100" />
+          <Property Name="StateOtherReq" Type="varchar" MaxLength="100" />
+          <Property Name="StateOtherShip" Type="varchar" MaxLength="100" />
+          <Property Name="Approver1" Type="varchar" MaxLength="200" />
+          <Property Name="Approver2" Type="varchar" MaxLength="200" />
+          <Property Name="Approver3" Type="varchar" MaxLength="200" />
+          <Property Name="Approver4" Type="varchar" MaxLength="200" />
+          <Property Name="Approver5" Type="varchar" MaxLength="200" />
+          <Property Name="Approver6" Type="varchar" MaxLength="200" />
+          <Property Name="Approver7" Type="varchar" MaxLength="200" />
+          <Property Name="Approver8" Type="varchar" MaxLength="200" />
+          <Property Name="Approver9" Type="varchar" MaxLength="200" />
+          <Property Name="Approver10" Type="varchar" MaxLength="200" />
+          <Property Name="ApproverSignature1" Type="varchar" MaxLength="100" />
+          <Property Name="ApproverSignature2" Type="varchar" MaxLength="100" />
+          <Property Name="ApproverSignature3" Type="varchar" MaxLength="100" />
+          <Property Name="ApproverSignature4" Type="varchar" MaxLength="100" />
+          <Property Name="ApproverSignature5" Type="varchar" MaxLength="100" />
+          <Property Name="ApproverSignature6" Type="varchar" MaxLength="100" />
+          <Property Name="ApproverSignature7" Type="varchar" MaxLength="100" />
+          <Property Name="ApproverSignature8" Type="varchar" MaxLength="100" />
+          <Property Name="ApproverSignature9" Type="varchar" MaxLength="100" />
+          <Property Name="ApproverSignature10" Type="varchar" MaxLength="100" />
+          <Property Name="ApproverDate1" Type="datetime" />
+          <Property Name="ApproverDate2" Type="datetime" />
+          <Property Name="ApproverDate3" Type="datetime" />
+          <Property Name="ApproverDate4" Type="datetime" />
+          <Property Name="ApproverDate5" Type="datetime" />
+          <Property Name="ApproverDate6" Type="datetime" />
+          <Property Name="ApproverDate7" Type="datetime" />
+          <Property Name="ApproverDate8" Type="datetime" />
+          <Property Name="ApproverDate9" Type="datetime" />
+          <Property Name="ApproverDate10" Type="datetime" />
+          <Property Name="Copy1" Type="varchar" MaxLength="400" />
+          <Property Name="Copy2" Type="varchar" MaxLength="400" />
+          <Property Name="Copy3" Type="varchar" MaxLength="400" />
+          <Property Name="Copy4" Type="varchar" MaxLength="400" />
+          <Property Name="Copy5" Type="varchar" MaxLength="400" />
+          <Property Name="Copy6" Type="varchar" MaxLength="400" />
+          <Property Name="Copy7" Type="varchar" MaxLength="400" />
+          <Property Name="Copy8" Type="varchar" MaxLength="400" />
+          <Property Name="Copy9" Type="varchar" MaxLength="400" />
+          <Property Name="Copy10" Type="varchar" MaxLength="400" />
+          <Property Name="ApprovalSendTo" Type="varchar" MaxLength="400" />
+          <Property Name="ApproverEmail1" Type="varchar" MaxLength="100" />
+          <Property Name="ApproverEmail2" Type="varchar" MaxLength="100" />
+          <Property Name="ApproverEmail3" Type="varchar" MaxLength="100" />
+          <Property Name="ApproverEmail4" Type="varchar" MaxLength="100" />
+          <Property Name="ApproverEmail5" Type="varchar" MaxLength="100" />
+          <Property Name="ApproverEmail6" Type="varchar" MaxLength="100" />
+          <Property Name="ApproverEmail7" Type="varchar" MaxLength="100" />
+          <Property Name="ApproverEmail8" Type="varchar" MaxLength="100" />
+          <Property Name="ApproverEmail9" Type="varchar" MaxLength="100" />
+          <Property Name="ApproverEmail10" Type="varchar" MaxLength="100" />
+          <Property Name="CopyEmail1" Type="varchar" MaxLength="400" />
+          <Property Name="CopyEmail2" Type="varchar" MaxLength="400" />
+          <Property Name="CopyEmail3" Type="varchar" MaxLength="400" />
+          <Property Name="CopyEmail4" Type="varchar" MaxLength="400" />
+          <Property Name="CopyEmail5" Type="varchar" MaxLength="400" />
+          <Property Name="CopyEmail6" Type="varchar" MaxLength="400" />
+          <Property Name="CopyEmail7" Type="varchar" MaxLength="400" />
+          <Property Name="CopyEmail8" Type="varchar" MaxLength="400" />
+          <Property Name="CopyEmail9" Type="varchar" MaxLength="400" />
+          <Property Name="CopyEmail10" Type="varchar" MaxLength="400" />
+          <Property Name="CopyEmail0" Type="varchar" MaxLength="400" />
+          <Property Name="ApproverEmail0" Type="varchar" MaxLength="100" />
+          <Property Name="ApprovalSendToEmail" Type="varchar" MaxLength="400" />
+          <Property Name="Copy0" Type="varchar" MaxLength="400" />
+          <Property Name="ApproverSignature0" Type="varchar" MaxLength="100" />
+          <Property Name="ApproverDate0" Type="datetime" />
+          <Property Name="ApproverTitle0" Type="varchar" MaxLength="50" />
+          <Property Name="ApproverTitle1" Type="varchar" MaxLength="50" />
+          <Property Name="ApproverTitle2" Type="varchar" MaxLength="50" />
+          <Property Name="ApproverTitle3" Type="varchar" MaxLength="50" />
+          <Property Name="ApproverTitle4" Type="varchar" MaxLength="50" />
+          <Property Name="ApproverTitle5" Type="varchar" MaxLength="50" />
+          <Property Name="ApproverTitle6" Type="varchar" MaxLength="50" />
+          <Property Name="ApproverTitle7" Type="varchar" MaxLength="50" />
+          <Property Name="ApproverTitle8" Type="varchar" MaxLength="50" />
+          <Property Name="ApproverTitle9" Type="varchar" MaxLength="50" />
+          <Property Name="ApproverTitle10" Type="varchar" MaxLength="50" />
+          <Property Name="NumApprovals" Type="int" />
+          <Property Name="Approver0" Type="varchar" MaxLength="200" />
+          <Property Name="ApproverDecision0" Type="varchar" MaxLength="50" />
+          <Property Name="ApproverDecision1" Type="varchar" MaxLength="50" />
+          <Property Name="ApproverDecision2" Type="varchar" MaxLength="50" />
+          <Property Name="ApproverDecision3" Type="varchar" MaxLength="50" />
+          <Property Name="ApproverDecision4" Type="varchar" MaxLength="50" />
+          <Property Name="ApproverDecision5" Type="varchar" MaxLength="50" />
+          <Property Name="ApproverDecision6" Type="varchar" MaxLength="50" />
+          <Property Name="ApproverDecision7" Type="varchar" MaxLength="50" />
+          <Property Name="ApproverDecision8" Type="varchar" MaxLength="50" />
+          <Property Name="ApproverDecision9" Type="varchar" MaxLength="50" />
+          <Property Name="ApproverDecision10" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="FR_Lang">
+          <Key>
+            <PropertyRef Name="lfzid" />
+          </Key>
+          <Property Name="lfzid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FormTitle" Type="varchar" MaxLength="50" />
+          <Property Name="FormNumber" Type="varchar" MaxLength="50" />
+          <Property Name="Created" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="Status" Type="varchar" MaxLength="50" />
+          <Property Name="Representative" Type="varchar" MaxLength="50" />
+          <Property Name="Region" Type="varchar" MaxLength="50" />
+          <Property Name="SectionReqHospital" Type="varchar" MaxLength="50" />
+          <Property Name="SectionShipHospital" Type="varchar" MaxLength="50" />
+          <Property Name="SectionApprovals" Type="varchar" MaxLength="50" />
+          <Property Name="SectionDetails" Type="varchar" MaxLength="50" />
+          <Property Name="HospitalReq" Type="varchar" MaxLength="50" />
+          <Property Name="AccountNumberReq" Type="varchar" MaxLength="50" />
+          <Property Name="CityReq" Type="varchar" MaxLength="50" />
+          <Property Name="StateReq" Type="varchar" MaxLength="50" />
+          <Property Name="ZipReq" Type="varchar" MaxLength="50" />
+          <Property Name="ContactName" Type="varchar" MaxLength="50" />
+          <Property Name="ContactPhone" Type="varchar" MaxLength="50" />
+          <Property Name="SameHospAddr" Type="varchar" MaxLength="50" />
+          <Property Name="HospitalShip" Type="varchar" MaxLength="50" />
+          <Property Name="AccountNumberShip" Type="varchar" MaxLength="50" />
+          <Property Name="CityShip" Type="varchar" MaxLength="50" />
+          <Property Name="StateShip" Type="varchar" MaxLength="50" />
+          <Property Name="ZipShip" Type="varchar" MaxLength="50" />
+          <Property Name="FreezerType" Type="varchar" MaxLength="50" />
+          <Property Name="FreezerTypeOther" Type="varchar" MaxLength="50" />
+          <Property Name="ReqArrivalDate" Type="varchar" MaxLength="50" />
+          <Property Name="PONumber" Type="varchar" MaxLength="50" />
+          <Property Name="Address1Req" Type="varchar" MaxLength="50" />
+          <Property Name="Address2Req" Type="varchar" MaxLength="50" />
+          <Property Name="SameAddress" Type="varchar" MaxLength="50" />
+          <Property Name="Address1Ship" Type="varchar" MaxLength="50" />
+          <Property Name="Address2Ship" Type="varchar" MaxLength="50" />
+          <Property Name="CountryReq" Type="varchar" MaxLength="50" />
+          <Property Name="CountryShip" Type="varchar" MaxLength="50" />
+          <Property Name="CountryOtherReq" Type="varchar" MaxLength="50" />
+          <Property Name="CountryOtherShip" Type="varchar" MaxLength="50" />
+          <Property Name="StateOtherReq" Type="varchar" MaxLength="50" />
+          <Property Name="StateOtherShip" Type="varchar" MaxLength="50" />
+          <Property Name="Approvers" Type="varchar" MaxLength="50" />
+          <Property Name="Signatures" Type="varchar" MaxLength="50" />
+          <Property Name="ApproverTitles" Type="varchar" MaxLength="50" />
+          <Property Name="ApproverDecisions" Type="varchar" MaxLength="50" />
+          <Property Name="LangName" Type="varchar" MaxLength="50" />
+          <Property Name="Lang" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Keywords">
+          <Key>
+            <PropertyRef Name="kid" />
+          </Key>
+          <Property Name="kid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Keyword" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="300" />
+          <Property Name="Value" Type="varchar" MaxLength="1000" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Lang">
+          <Key>
+            <PropertyRef Name="lid" />
+          </Key>
+          <Property Name="lid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Lang" Type="varchar" MaxLength="10" />
+          <Property Name="LangNameEnglish" Type="varchar" MaxLength="100" />
+          <Property Name="LangName" Type="varchar" MaxLength="10" />
+          <Property Name="AppTitle" Type="varchar" MaxLength="100" />
+          <Property Name="Title" Type="varchar" MaxLength="100" />
+          <Property Name="Welcome" Type="varchar" MaxLength="100" />
+          <Property Name="WelcomeMsg" Type="varchar" MaxLength="1000" />
+          <Property Name="SubmitButton" Type="varchar" MaxLength="100" />
+          <Property Name="EditButton" Type="varchar" MaxLength="100" />
+          <Property Name="BackButton" Type="varchar" MaxLength="100" />
+          <Property Name="DialogMsg" Type="varchar" MaxLength="100" />
+          <Property Name="OK" Type="varchar" MaxLength="100" />
+          <Property Name="AuthMsg" Type="varchar" MaxLength="100" />
+          <Property Name="AuthErrorMsg" Type="varchar" MaxLength="100" />
+          <Property Name="AuthNoAccessMsg" Type="varchar" MaxLength="100" />
+          <Property Name="AuthOKMsg" Type="varchar" MaxLength="100" />
+          <Property Name="LoginUserName" Type="varchar" MaxLength="100" />
+          <Property Name="LoginPassword" Type="varchar" MaxLength="100" />
+          <Property Name="LoginSubmit" Type="varchar" MaxLength="100" />
+          <Property Name="NewForm" Type="varchar" MaxLength="100" />
+          <Property Name="Logout" Type="varchar" MaxLength="50" />
+          <Property Name="FormError" Type="varchar" MaxLength="50" />
+          <Property Name="AdminMenuHeader" Type="varchar" MaxLength="50" />
+          <Property Name="AdminMenuAccessControl" Type="varchar" MaxLength="100" />
+          <Property Name="AdminMenuLangSetup" Type="varchar" MaxLength="100" />
+          <Property Name="AdminLanguage" Type="varchar" MaxLength="100" />
+          <Property Name="AdminLanguageCode" Type="varchar" MaxLength="100" />
+          <Property Name="FormUpdated" Type="varchar" MaxLength="100" />
+          <Property Name="FormAdded" Type="varchar" MaxLength="100" />
+          <Property Name="UnsavedChanges" Type="varchar" MaxLength="100" />
+          <Property Name="NewLangRecord" Type="varchar" MaxLength="100" />
+          <Property Name="DeleteConfirm" Type="varchar" MaxLength="100" />
+          <Property Name="KeywordValues" Type="varchar" MaxLength="2000" />
+          <Property Name="Keyword" Type="varchar" MaxLength="2000" />
+          <Property Name="KeywordDescription" Type="varchar" MaxLength="2000" />
+          <Property Name="KeywordValue" Type="varchar" MaxLength="2000" />
+          <Property Name="AclInstructions" Type="varchar" MaxLength="2000" />
+          <Property Name="AclGroups" Type="varchar" MaxLength="100" />
+          <Property Name="AclGroupsAdmin" Type="varchar" MaxLength="50" />
+          <Property Name="AclGroupsIT" Type="varchar" MaxLength="50" />
+          <Property Name="MenuFZForm" Type="varchar" MaxLength="50" />
+          <Property Name="MenuIMForm" Type="varchar" MaxLength="50" />
+          <Property Name="MenuTMForm" Type="varchar" MaxLength="50" />
+          <Property Name="MenuSAForm" Type="varchar" MaxLength="50" />
+          <Property Name="ViewCreatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="ViewCreated" Type="varchar" MaxLength="50" />
+          <Property Name="ViewStatus" Type="varchar" MaxLength="50" />
+          <Property Name="ViewCompleted" Type="varchar" MaxLength="50" />
+          <Property Name="ViewFormNumber" Type="varchar" MaxLength="50" />
+          <Property Name="ViewClear" Type="varchar" MaxLength="50" />
+          <Property Name="ViewSearch" Type="varchar" MaxLength="50" />
+          <Property Name="ViewSearchFldName" Type="varchar" MaxLength="50" />
+          <Property Name="ViewSearchText" Type="varchar" MaxLength="50" />
+          <Property Name="ViewFRTitle" Type="varchar" MaxLength="50" />
+          <Property Name="ViewEnterSearchText" Type="varchar" MaxLength="50" />
+          <Property Name="AdminMenuApprSetup" Type="varchar" MaxLength="50" />
+          <Property Name="AdminMenuRegionSetup" Type="varchar" MaxLength="50" />
+          <Property Name="HospitalReq" Type="varchar" MaxLength="50" />
+          <Property Name="FreezerType" Type="varchar" MaxLength="50" />
+          <Property Name="HospitalShip" Type="varchar" MaxLength="50" />
+          <Property Name="SaveButton" Type="varchar" MaxLength="50" />
+          <Property Name="CancelButton" Type="varchar" MaxLength="50" />
+          <Property Name="DialogBoxSelect" Type="varchar" MaxLength="50" />
+          <Property Name="DialogBoxOther" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Region">
+          <Key>
+            <PropertyRef Name="rid" />
+          </Key>
+          <Property Name="rid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Region" Type="varchar" MaxLength="50" />
+          <Property Name="Approver" Type="varchar" MaxLength="200" />
+          <Property Name="ApproverEmail" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityContainer Name="Pricing_DEVModelStoreContainer">
+          <EntitySet Name="Approval" EntityType="Self.Approval" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FR_Form" EntityType="Self.FR_Form" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FR_Lang" EntityType="Self.FR_Lang" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Keywords" EntityType="Self.Keywords" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Lang" EntityType="Self.Lang" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Region" EntityType="Self.Region" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Pricing_DEVModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="FR_Form">
+          <Key>
+            <PropertyRef Name="fzid" />
+          </Key>
+          <Property Name="fzid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FormType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="StatusNumber" Type="Int32" />
+          <Property Name="Representative" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Region" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HospitalReq" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AccountNumberReq" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CityReq" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StateReq" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ZipReq" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ContactName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ContactPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SameHospAddr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HospitalShip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AccountNumberShip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CityShip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StateShip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ZipShip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FreezerType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FreezerTypeOther" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ReqArrivalDate" Type="DateTime" Precision="0" />
+          <Property Name="PONumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Readers" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="Completed" Type="DateTime" Precision="3" />
+          <Property Name="FormNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address1Req" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Address2Req" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Address1Ship" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Address2Ship" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CountryReq" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CountryShip" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CountryOtherReq" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CountryOtherShip" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="StateOtherReq" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="StateOtherShip" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Approver1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Approver2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Approver3" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Approver4" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Approver5" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Approver6" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Approver7" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Approver8" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Approver9" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Approver10" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverSignature1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverSignature2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverSignature3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverSignature4" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverSignature5" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverSignature6" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverSignature7" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverSignature8" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverSignature9" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverSignature10" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverDate1" Type="DateTime" Precision="3" />
+          <Property Name="ApproverDate2" Type="DateTime" Precision="3" />
+          <Property Name="ApproverDate3" Type="DateTime" Precision="3" />
+          <Property Name="ApproverDate4" Type="DateTime" Precision="3" />
+          <Property Name="ApproverDate5" Type="DateTime" Precision="3" />
+          <Property Name="ApproverDate6" Type="DateTime" Precision="3" />
+          <Property Name="ApproverDate7" Type="DateTime" Precision="3" />
+          <Property Name="ApproverDate8" Type="DateTime" Precision="3" />
+          <Property Name="ApproverDate9" Type="DateTime" Precision="3" />
+          <Property Name="ApproverDate10" Type="DateTime" Precision="3" />
+          <Property Name="Copy1" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="Copy2" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="Copy3" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="Copy4" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="Copy5" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="Copy6" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="Copy7" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="Copy8" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="Copy9" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="Copy10" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="ApprovalSendTo" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverEmail1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverEmail2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverEmail3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverEmail4" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverEmail5" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverEmail6" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverEmail7" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverEmail8" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverEmail9" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverEmail10" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CopyEmail1" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="CopyEmail2" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="CopyEmail3" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="CopyEmail4" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="CopyEmail5" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="CopyEmail6" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="CopyEmail7" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="CopyEmail8" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="CopyEmail9" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="CopyEmail10" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="CopyEmail0" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverEmail0" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ApprovalSendToEmail" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="Copy0" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverSignature0" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverDate0" Type="DateTime" Precision="3" />
+          <Property Name="ApproverTitle0" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverTitle1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverTitle2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverTitle3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverTitle4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverTitle5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverTitle6" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverTitle7" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverTitle8" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverTitle9" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverTitle10" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NumApprovals" Type="Int32" />
+          <Property Name="Approver0" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverDecision0" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverDecision1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverDecision2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverDecision3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverDecision4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverDecision5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverDecision6" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverDecision7" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverDecision8" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverDecision9" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverDecision10" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="PricingDB_Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="FR_Form" EntityType="Self.FR_Form" />
+          <EntitySet Name="Approvals" EntityType="Pricing_DEVModel.Approval" />
+          <EntitySet Name="Keywords" EntityType="Pricing_DEVModel.Keyword" />
+          <EntitySet Name="Regions" EntityType="Pricing_DEVModel.Region" />
+          <EntitySet Name="FR_Lang" EntityType="Pricing_DEVModel.FR_Lang" />
+          <EntitySet Name="Langs" EntityType="Pricing_DEVModel.Lang" />
+        </EntityContainer>
+        <EntityType Name="Approval">
+          <Key>
+            <PropertyRef Name="aid" />
+          </Key>
+          <Property Name="aid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FormType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NumApprovals" Type="Int32" Nullable="false" />
+          <Property Name="Approver1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Approver2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Approver3" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Approver4" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Approver5" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Approver6" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Approver7" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Approver8" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Approver9" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Approver10" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Copy1" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="Copy2" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="Copy3" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="Copy4" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="Copy5" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="Copy6" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="Copy7" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="Copy8" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="Copy9" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="Copy10" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="ApprovalSendTo" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="FormTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Territory" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverTitle1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverTitle2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverTitle3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverTitle4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverTitle5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverTitle6" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverTitle7" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverTitle8" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverTitle9" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverTitle10" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverEmail1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverEmail2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverEmail3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverEmail4" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverEmail5" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverEmail6" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverEmail7" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverEmail8" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverEmail9" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverEmail10" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CopyEmail1" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="CopyEmail2" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="CopyEmail3" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="CopyEmail4" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="CopyEmail5" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="CopyEmail6" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="CopyEmail7" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="CopyEmail8" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="CopyEmail9" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="CopyEmail10" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="Approver0" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverTitle0" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverEmail0" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Copy0" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="CopyEmail0" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="ApprovalSendToEmail" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Keyword">
+          <Key>
+            <PropertyRef Name="kid" />
+          </Key>
+          <Property Name="kid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Keyword1" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Value" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Region">
+          <Key>
+            <PropertyRef Name="rid" />
+          </Key>
+          <Property Name="rid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Region1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Approver" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverEmail" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="FR_Lang">
+          <Key>
+            <PropertyRef Name="lfzid" />
+          </Key>
+          <Property Name="lfzid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FormTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FormNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Representative" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Region" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SectionReqHospital" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SectionShipHospital" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SectionApprovals" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SectionDetails" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HospitalReq" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AccountNumberReq" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CityReq" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StateReq" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ZipReq" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ContactName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ContactPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SameHospAddr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HospitalShip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AccountNumberShip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CityShip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StateShip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ZipShip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FreezerType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FreezerTypeOther" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ReqArrivalDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PONumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address1Req" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address2Req" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SameAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address1Ship" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address2Ship" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CountryReq" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CountryShip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CountryOtherReq" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CountryOtherShip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StateOtherReq" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StateOtherShip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Approvers" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Signatures" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverTitles" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApproverDecisions" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LangName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Lang" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Lang">
+          <Key>
+            <PropertyRef Name="lid" />
+          </Key>
+          <Property Name="lid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Lang1" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="LangNameEnglish" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="LangName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="AppTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Welcome" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="WelcomeMsg" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="SubmitButton" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="EditButton" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="BackButton" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="DialogMsg" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="OK" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AuthMsg" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AuthErrorMsg" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AuthNoAccessMsg" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AuthOKMsg" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="LoginUserName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="LoginPassword" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="LoginSubmit" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="NewForm" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Logout" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FormError" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AdminMenuHeader" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AdminMenuAccessControl" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AdminMenuLangSetup" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AdminLanguage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AdminLanguageCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FormUpdated" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FormAdded" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="UnsavedChanges" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="NewLangRecord" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="DeleteConfirm" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="KeywordValues" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="Keyword" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="KeywordDescription" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="KeywordValue" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="AclInstructions" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="AclGroups" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AclGroupsAdmin" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AclGroupsIT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MenuFZForm" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MenuIMForm" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MenuTMForm" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MenuSAForm" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ViewCreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ViewCreated" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ViewStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ViewCompleted" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ViewFormNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ViewClear" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ViewSearch" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ViewSearchFldName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ViewSearchText" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ViewFRTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ViewEnterSearchText" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AdminMenuApprSetup" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AdminMenuRegionSetup" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HospitalReq" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FreezerType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HospitalShip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SaveButton" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CancelButton" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DialogBoxSelect" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DialogBoxOther" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Pricing_DEVModelStoreContainer" CdmEntityContainer="PricingDB_Entities">
+          <EntitySetMapping Name="FR_Form">
+            <EntityTypeMapping TypeName="Pricing_DEVModel.FR_Form">
+              <MappingFragment StoreEntitySet="FR_Form">
+                <ScalarProperty Name="ApproverDecision10" ColumnName="ApproverDecision10" />
+                <ScalarProperty Name="ApproverDecision9" ColumnName="ApproverDecision9" />
+                <ScalarProperty Name="ApproverDecision8" ColumnName="ApproverDecision8" />
+                <ScalarProperty Name="ApproverDecision7" ColumnName="ApproverDecision7" />
+                <ScalarProperty Name="ApproverDecision6" ColumnName="ApproverDecision6" />
+                <ScalarProperty Name="ApproverDecision5" ColumnName="ApproverDecision5" />
+                <ScalarProperty Name="ApproverDecision4" ColumnName="ApproverDecision4" />
+                <ScalarProperty Name="ApproverDecision3" ColumnName="ApproverDecision3" />
+                <ScalarProperty Name="ApproverDecision2" ColumnName="ApproverDecision2" />
+                <ScalarProperty Name="ApproverDecision1" ColumnName="ApproverDecision1" />
+                <ScalarProperty Name="ApproverDecision0" ColumnName="ApproverDecision0" />
+                <ScalarProperty Name="Approver0" ColumnName="Approver0" />
+                <ScalarProperty Name="NumApprovals" ColumnName="NumApprovals" />
+                <ScalarProperty Name="ApproverTitle10" ColumnName="ApproverTitle10" />
+                <ScalarProperty Name="ApproverTitle9" ColumnName="ApproverTitle9" />
+                <ScalarProperty Name="ApproverTitle8" ColumnName="ApproverTitle8" />
+                <ScalarProperty Name="ApproverTitle7" ColumnName="ApproverTitle7" />
+                <ScalarProperty Name="ApproverTitle6" ColumnName="ApproverTitle6" />
+                <ScalarProperty Name="ApproverTitle5" ColumnName="ApproverTitle5" />
+                <ScalarProperty Name="ApproverTitle4" ColumnName="ApproverTitle4" />
+                <ScalarProperty Name="ApproverTitle3" ColumnName="ApproverTitle3" />
+                <ScalarProperty Name="ApproverTitle2" ColumnName="ApproverTitle2" />
+                <ScalarProperty Name="ApproverTitle1" ColumnName="ApproverTitle1" />
+                <ScalarProperty Name="ApproverTitle0" ColumnName="ApproverTitle0" />
+                <ScalarProperty Name="ApproverDate0" ColumnName="ApproverDate0" />
+                <ScalarProperty Name="ApproverSignature0" ColumnName="ApproverSignature0" />
+                <ScalarProperty Name="Copy0" ColumnName="Copy0" />
+                <ScalarProperty Name="ApprovalSendToEmail" ColumnName="ApprovalSendToEmail" />
+                <ScalarProperty Name="ApproverEmail0" ColumnName="ApproverEmail0" />
+                <ScalarProperty Name="CopyEmail0" ColumnName="CopyEmail0" />
+                <ScalarProperty Name="CopyEmail10" ColumnName="CopyEmail10" />
+                <ScalarProperty Name="CopyEmail9" ColumnName="CopyEmail9" />
+                <ScalarProperty Name="CopyEmail8" ColumnName="CopyEmail8" />
+                <ScalarProperty Name="CopyEmail7" ColumnName="CopyEmail7" />
+                <ScalarProperty Name="CopyEmail6" ColumnName="CopyEmail6" />
+                <ScalarProperty Name="CopyEmail5" ColumnName="CopyEmail5" />
+                <ScalarProperty Name="CopyEmail4" ColumnName="CopyEmail4" />
+                <ScalarProperty Name="CopyEmail3" ColumnName="CopyEmail3" />
+                <ScalarProperty Name="CopyEmail2" ColumnName="CopyEmail2" />
+                <ScalarProperty Name="CopyEmail1" ColumnName="CopyEmail1" />
+                <ScalarProperty Name="ApproverEmail10" ColumnName="ApproverEmail10" />
+                <ScalarProperty Name="ApproverEmail9" ColumnName="ApproverEmail9" />
+                <ScalarProperty Name="ApproverEmail8" ColumnName="ApproverEmail8" />
+                <ScalarProperty Name="ApproverEmail7" ColumnName="ApproverEmail7" />
+                <ScalarProperty Name="ApproverEmail6" ColumnName="ApproverEmail6" />
+                <ScalarProperty Name="ApproverEmail5" ColumnName="ApproverEmail5" />
+                <ScalarProperty Name="ApproverEmail4" ColumnName="ApproverEmail4" />
+                <ScalarProperty Name="ApproverEmail3" ColumnName="ApproverEmail3" />
+                <ScalarProperty Name="ApproverEmail2" ColumnName="ApproverEmail2" />
+                <ScalarProperty Name="ApproverEmail1" ColumnName="ApproverEmail1" />
+                <ScalarProperty Name="ApprovalSendTo" ColumnName="ApprovalSendTo" />
+                <ScalarProperty Name="Copy10" ColumnName="Copy10" />
+                <ScalarProperty Name="Copy9" ColumnName="Copy9" />
+                <ScalarProperty Name="Copy8" ColumnName="Copy8" />
+                <ScalarProperty Name="Copy7" ColumnName="Copy7" />
+                <ScalarProperty Name="Copy6" ColumnName="Copy6" />
+                <ScalarProperty Name="Copy5" ColumnName="Copy5" />
+                <ScalarProperty Name="Copy4" ColumnName="Copy4" />
+                <ScalarProperty Name="Copy3" ColumnName="Copy3" />
+                <ScalarProperty Name="Copy2" ColumnName="Copy2" />
+                <ScalarProperty Name="Copy1" ColumnName="Copy1" />
+                <ScalarProperty Name="ApproverDate10" ColumnName="ApproverDate10" />
+                <ScalarProperty Name="ApproverDate9" ColumnName="ApproverDate9" />
+                <ScalarProperty Name="ApproverDate8" ColumnName="ApproverDate8" />
+                <ScalarProperty Name="ApproverDate7" ColumnName="ApproverDate7" />
+                <ScalarProperty Name="ApproverDate6" ColumnName="ApproverDate6" />
+                <ScalarProperty Name="ApproverDate5" ColumnName="ApproverDate5" />
+                <ScalarProperty Name="ApproverDate4" ColumnName="ApproverDate4" />
+                <ScalarProperty Name="ApproverDate3" ColumnName="ApproverDate3" />
+                <ScalarProperty Name="ApproverDate2" ColumnName="ApproverDate2" />
+                <ScalarProperty Name="ApproverDate1" ColumnName="ApproverDate1" />
+                <ScalarProperty Name="ApproverSignature10" ColumnName="ApproverSignature10" />
+                <ScalarProperty Name="ApproverSignature9" ColumnName="ApproverSignature9" />
+                <ScalarProperty Name="ApproverSignature8" ColumnName="ApproverSignature8" />
+                <ScalarProperty Name="ApproverSignature7" ColumnName="ApproverSignature7" />
+                <ScalarProperty Name="ApproverSignature6" ColumnName="ApproverSignature6" />
+                <ScalarProperty Name="ApproverSignature5" ColumnName="ApproverSignature5" />
+                <ScalarProperty Name="ApproverSignature4" ColumnName="ApproverSignature4" />
+                <ScalarProperty Name="ApproverSignature3" ColumnName="ApproverSignature3" />
+                <ScalarProperty Name="ApproverSignature2" ColumnName="ApproverSignature2" />
+                <ScalarProperty Name="ApproverSignature1" ColumnName="ApproverSignature1" />
+                <ScalarProperty Name="Approver10" ColumnName="Approver10" />
+                <ScalarProperty Name="Approver9" ColumnName="Approver9" />
+                <ScalarProperty Name="Approver8" ColumnName="Approver8" />
+                <ScalarProperty Name="Approver7" ColumnName="Approver7" />
+                <ScalarProperty Name="Approver6" ColumnName="Approver6" />
+                <ScalarProperty Name="Approver5" ColumnName="Approver5" />
+                <ScalarProperty Name="Approver4" ColumnName="Approver4" />
+                <ScalarProperty Name="Approver3" ColumnName="Approver3" />
+                <ScalarProperty Name="Approver2" ColumnName="Approver2" />
+                <ScalarProperty Name="Approver1" ColumnName="Approver1" />
+                <ScalarProperty Name="StateOtherShip" ColumnName="StateOtherShip" />
+                <ScalarProperty Name="StateOtherReq" ColumnName="StateOtherReq" />
+                <ScalarProperty Name="CountryOtherShip" ColumnName="CountryOtherShip" />
+                <ScalarProperty Name="CountryOtherReq" ColumnName="CountryOtherReq" />
+                <ScalarProperty Name="CountryShip" ColumnName="CountryShip" />
+                <ScalarProperty Name="CountryReq" ColumnName="CountryReq" />
+                <ScalarProperty Name="Address2Ship" ColumnName="Address2Ship" />
+                <ScalarProperty Name="Address1Ship" ColumnName="Address1Ship" />
+                <ScalarProperty Name="Address2Req" ColumnName="Address2Req" />
+                <ScalarProperty Name="Address1Req" ColumnName="Address1Req" />
+                <ScalarProperty Name="FormNumber" ColumnName="FormNumber" />
+                <ScalarProperty Name="Completed" ColumnName="Completed" />
+                <ScalarProperty Name="fzid" ColumnName="fzid" />
+                <ScalarProperty Name="FormType" ColumnName="FormType" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="StatusNumber" ColumnName="StatusNumber" />
+                <ScalarProperty Name="Representative" ColumnName="Representative" />
+                <ScalarProperty Name="Region" ColumnName="Region" />
+                <ScalarProperty Name="HospitalReq" ColumnName="HospitalReq" />
+                <ScalarProperty Name="AccountNumberReq" ColumnName="AccountNumberReq" />
+                <ScalarProperty Name="CityReq" ColumnName="CityReq" />
+                <ScalarProperty Name="StateReq" ColumnName="StateReq" />
+                <ScalarProperty Name="ZipReq" ColumnName="ZipReq" />
+                <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+                <ScalarProperty Name="ContactPhone" ColumnName="ContactPhone" />
+                <ScalarProperty Name="SameHospAddr" ColumnName="SameHospAddr" />
+                <ScalarProperty Name="HospitalShip" ColumnName="HospitalShip" />
+                <ScalarProperty Name="AccountNumberShip" ColumnName="AccountNumberShip" />
+                <ScalarProperty Name="CityShip" ColumnName="CityShip" />
+                <ScalarProperty Name="StateShip" ColumnName="StateShip" />
+                <ScalarProperty Name="ZipShip" ColumnName="ZipShip" />
+                <ScalarProperty Name="FreezerType" ColumnName="FreezerType" />
+                <ScalarProperty Name="FreezerTypeOther" ColumnName="FreezerTypeOther" />
+                <ScalarProperty Name="ReqArrivalDate" ColumnName="ReqArrivalDate" />
+                <ScalarProperty Name="PONumber" ColumnName="PONumber" />
+                <ScalarProperty Name="Readers" ColumnName="Readers" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Approvals">
+            <EntityTypeMapping TypeName="Pricing_DEVModel.Approval">
+              <MappingFragment StoreEntitySet="Approval">
+                <ScalarProperty Name="ApprovalSendToEmail" ColumnName="ApprovalSendToEmail" />
+                <ScalarProperty Name="CopyEmail0" ColumnName="CopyEmail0" />
+                <ScalarProperty Name="Copy0" ColumnName="Copy0" />
+                <ScalarProperty Name="ApproverEmail0" ColumnName="ApproverEmail0" />
+                <ScalarProperty Name="ApproverTitle0" ColumnName="ApproverTitle0" />
+                <ScalarProperty Name="Approver0" ColumnName="Approver0" />
+                <ScalarProperty Name="CopyEmail10" ColumnName="CopyEmail10" />
+                <ScalarProperty Name="CopyEmail9" ColumnName="CopyEmail9" />
+                <ScalarProperty Name="CopyEmail8" ColumnName="CopyEmail8" />
+                <ScalarProperty Name="CopyEmail7" ColumnName="CopyEmail7" />
+                <ScalarProperty Name="CopyEmail6" ColumnName="CopyEmail6" />
+                <ScalarProperty Name="CopyEmail5" ColumnName="CopyEmail5" />
+                <ScalarProperty Name="CopyEmail4" ColumnName="CopyEmail4" />
+                <ScalarProperty Name="CopyEmail3" ColumnName="CopyEmail3" />
+                <ScalarProperty Name="CopyEmail2" ColumnName="CopyEmail2" />
+                <ScalarProperty Name="CopyEmail1" ColumnName="CopyEmail1" />
+                <ScalarProperty Name="ApproverEmail10" ColumnName="ApproverEmail10" />
+                <ScalarProperty Name="ApproverEmail9" ColumnName="ApproverEmail9" />
+                <ScalarProperty Name="ApproverEmail8" ColumnName="ApproverEmail8" />
+                <ScalarProperty Name="ApproverEmail7" ColumnName="ApproverEmail7" />
+                <ScalarProperty Name="ApproverEmail6" ColumnName="ApproverEmail6" />
+                <ScalarProperty Name="ApproverEmail5" ColumnName="ApproverEmail5" />
+                <ScalarProperty Name="ApproverEmail4" ColumnName="ApproverEmail4" />
+                <ScalarProperty Name="ApproverEmail3" ColumnName="ApproverEmail3" />
+                <ScalarProperty Name="ApproverEmail2" ColumnName="ApproverEmail2" />
+                <ScalarProperty Name="ApproverEmail1" ColumnName="ApproverEmail1" />
+                <ScalarProperty Name="ApproverTitle10" ColumnName="ApproverTitle10" />
+                <ScalarProperty Name="ApproverTitle9" ColumnName="ApproverTitle9" />
+                <ScalarProperty Name="ApproverTitle8" ColumnName="ApproverTitle8" />
+                <ScalarProperty Name="ApproverTitle7" ColumnName="ApproverTitle7" />
+                <ScalarProperty Name="ApproverTitle6" ColumnName="ApproverTitle6" />
+                <ScalarProperty Name="ApproverTitle5" ColumnName="ApproverTitle5" />
+                <ScalarProperty Name="ApproverTitle4" ColumnName="ApproverTitle4" />
+                <ScalarProperty Name="ApproverTitle3" ColumnName="ApproverTitle3" />
+                <ScalarProperty Name="ApproverTitle2" ColumnName="ApproverTitle2" />
+                <ScalarProperty Name="ApproverTitle1" ColumnName="ApproverTitle1" />
+                <ScalarProperty Name="Territory" ColumnName="Territory" />
+                <ScalarProperty Name="FormTypeName" ColumnName="FormTypeName" />
+                <ScalarProperty Name="ApprovalSendTo" ColumnName="ApprovalSendTo" />
+                <ScalarProperty Name="Copy10" ColumnName="Copy10" />
+                <ScalarProperty Name="Copy9" ColumnName="Copy9" />
+                <ScalarProperty Name="Copy8" ColumnName="Copy8" />
+                <ScalarProperty Name="Copy7" ColumnName="Copy7" />
+                <ScalarProperty Name="Copy6" ColumnName="Copy6" />
+                <ScalarProperty Name="Copy5" ColumnName="Copy5" />
+                <ScalarProperty Name="Copy4" ColumnName="Copy4" />
+                <ScalarProperty Name="Copy3" ColumnName="Copy3" />
+                <ScalarProperty Name="Copy2" ColumnName="Copy2" />
+                <ScalarProperty Name="Copy1" ColumnName="Copy1" />
+                <ScalarProperty Name="Approver10" ColumnName="Approver10" />
+                <ScalarProperty Name="Approver9" ColumnName="Approver9" />
+                <ScalarProperty Name="Approver8" ColumnName="Approver8" />
+                <ScalarProperty Name="Approver7" ColumnName="Approver7" />
+                <ScalarProperty Name="Approver6" ColumnName="Approver6" />
+                <ScalarProperty Name="Approver5" ColumnName="Approver5" />
+                <ScalarProperty Name="Approver4" ColumnName="Approver4" />
+                <ScalarProperty Name="Approver3" ColumnName="Approver3" />
+                <ScalarProperty Name="Approver2" ColumnName="Approver2" />
+                <ScalarProperty Name="Approver1" ColumnName="Approver1" />
+                <ScalarProperty Name="NumApprovals" ColumnName="NumApprovals" />
+                <ScalarProperty Name="FormType" ColumnName="FormType" />
+                <ScalarProperty Name="aid" ColumnName="aid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Keywords">
+            <EntityTypeMapping TypeName="Pricing_DEVModel.Keyword">
+              <MappingFragment StoreEntitySet="Keywords">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="Keyword1" ColumnName="Keyword" />
+                <ScalarProperty Name="kid" ColumnName="kid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Regions">
+            <EntityTypeMapping TypeName="Pricing_DEVModel.Region">
+              <MappingFragment StoreEntitySet="Region">
+                <ScalarProperty Name="ApproverEmail" ColumnName="ApproverEmail" />
+                <ScalarProperty Name="Approver" ColumnName="Approver" />
+                <ScalarProperty Name="Region1" ColumnName="Region" />
+                <ScalarProperty Name="rid" ColumnName="rid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FR_Lang">
+            <EntityTypeMapping TypeName="Pricing_DEVModel.FR_Lang">
+              <MappingFragment StoreEntitySet="FR_Lang">
+                <ScalarProperty Name="Lang" ColumnName="Lang" />
+                <ScalarProperty Name="LangName" ColumnName="LangName" />
+                <ScalarProperty Name="ApproverDecisions" ColumnName="ApproverDecisions" />
+                <ScalarProperty Name="ApproverTitles" ColumnName="ApproverTitles" />
+                <ScalarProperty Name="Signatures" ColumnName="Signatures" />
+                <ScalarProperty Name="Approvers" ColumnName="Approvers" />
+                <ScalarProperty Name="StateOtherShip" ColumnName="StateOtherShip" />
+                <ScalarProperty Name="StateOtherReq" ColumnName="StateOtherReq" />
+                <ScalarProperty Name="CountryOtherShip" ColumnName="CountryOtherShip" />
+                <ScalarProperty Name="CountryOtherReq" ColumnName="CountryOtherReq" />
+                <ScalarProperty Name="CountryShip" ColumnName="CountryShip" />
+                <ScalarProperty Name="CountryReq" ColumnName="CountryReq" />
+                <ScalarProperty Name="Address2Ship" ColumnName="Address2Ship" />
+                <ScalarProperty Name="Address1Ship" ColumnName="Address1Ship" />
+                <ScalarProperty Name="SameAddress" ColumnName="SameAddress" />
+                <ScalarProperty Name="Address2Req" ColumnName="Address2Req" />
+                <ScalarProperty Name="Address1Req" ColumnName="Address1Req" />
+                <ScalarProperty Name="PONumber" ColumnName="PONumber" />
+                <ScalarProperty Name="ReqArrivalDate" ColumnName="ReqArrivalDate" />
+                <ScalarProperty Name="FreezerTypeOther" ColumnName="FreezerTypeOther" />
+                <ScalarProperty Name="FreezerType" ColumnName="FreezerType" />
+                <ScalarProperty Name="ZipShip" ColumnName="ZipShip" />
+                <ScalarProperty Name="StateShip" ColumnName="StateShip" />
+                <ScalarProperty Name="CityShip" ColumnName="CityShip" />
+                <ScalarProperty Name="AccountNumberShip" ColumnName="AccountNumberShip" />
+                <ScalarProperty Name="HospitalShip" ColumnName="HospitalShip" />
+                <ScalarProperty Name="SameHospAddr" ColumnName="SameHospAddr" />
+                <ScalarProperty Name="ContactPhone" ColumnName="ContactPhone" />
+                <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+                <ScalarProperty Name="ZipReq" ColumnName="ZipReq" />
+                <ScalarProperty Name="StateReq" ColumnName="StateReq" />
+                <ScalarProperty Name="CityReq" ColumnName="CityReq" />
+                <ScalarProperty Name="AccountNumberReq" ColumnName="AccountNumberReq" />
+                <ScalarProperty Name="HospitalReq" ColumnName="HospitalReq" />
+                <ScalarProperty Name="SectionDetails" ColumnName="SectionDetails" />
+                <ScalarProperty Name="SectionApprovals" ColumnName="SectionApprovals" />
+                <ScalarProperty Name="SectionShipHospital" ColumnName="SectionShipHospital" />
+                <ScalarProperty Name="SectionReqHospital" ColumnName="SectionReqHospital" />
+                <ScalarProperty Name="Region" ColumnName="Region" />
+                <ScalarProperty Name="Representative" ColumnName="Representative" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="FormNumber" ColumnName="FormNumber" />
+                <ScalarProperty Name="FormTitle" ColumnName="FormTitle" />
+                <ScalarProperty Name="lfzid" ColumnName="lfzid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Langs">
+            <EntityTypeMapping TypeName="Pricing_DEVModel.Lang">
+              <MappingFragment StoreEntitySet="Lang">
+                <ScalarProperty Name="DialogBoxOther" ColumnName="DialogBoxOther" />
+                <ScalarProperty Name="DialogBoxSelect" ColumnName="DialogBoxSelect" />
+                <ScalarProperty Name="CancelButton" ColumnName="CancelButton" />
+                <ScalarProperty Name="SaveButton" ColumnName="SaveButton" />
+                <ScalarProperty Name="HospitalShip" ColumnName="HospitalShip" />
+                <ScalarProperty Name="FreezerType" ColumnName="FreezerType" />
+                <ScalarProperty Name="HospitalReq" ColumnName="HospitalReq" />
+                <ScalarProperty Name="AdminMenuRegionSetup" ColumnName="AdminMenuRegionSetup" />
+                <ScalarProperty Name="AdminMenuApprSetup" ColumnName="AdminMenuApprSetup" />
+                <ScalarProperty Name="ViewEnterSearchText" ColumnName="ViewEnterSearchText" />
+                <ScalarProperty Name="ViewFRTitle" ColumnName="ViewFRTitle" />
+                <ScalarProperty Name="ViewSearchText" ColumnName="ViewSearchText" />
+                <ScalarProperty Name="ViewSearchFldName" ColumnName="ViewSearchFldName" />
+                <ScalarProperty Name="ViewSearch" ColumnName="ViewSearch" />
+                <ScalarProperty Name="ViewClear" ColumnName="ViewClear" />
+                <ScalarProperty Name="ViewFormNumber" ColumnName="ViewFormNumber" />
+                <ScalarProperty Name="ViewCompleted" ColumnName="ViewCompleted" />
+                <ScalarProperty Name="ViewStatus" ColumnName="ViewStatus" />
+                <ScalarProperty Name="ViewCreated" ColumnName="ViewCreated" />
+                <ScalarProperty Name="ViewCreatedBy" ColumnName="ViewCreatedBy" />
+                <ScalarProperty Name="MenuSAForm" ColumnName="MenuSAForm" />
+                <ScalarProperty Name="MenuTMForm" ColumnName="MenuTMForm" />
+                <ScalarProperty Name="MenuIMForm" ColumnName="MenuIMForm" />
+                <ScalarProperty Name="MenuFZForm" ColumnName="MenuFZForm" />
+                <ScalarProperty Name="AclGroupsIT" ColumnName="AclGroupsIT" />
+                <ScalarProperty Name="AclGroupsAdmin" ColumnName="AclGroupsAdmin" />
+                <ScalarProperty Name="AclGroups" ColumnName="AclGroups" />
+                <ScalarProperty Name="AclInstructions" ColumnName="AclInstructions" />
+                <ScalarProperty Name="KeywordValue" ColumnName="KeywordValue" />
+                <ScalarProperty Name="KeywordDescription" ColumnName="KeywordDescription" />
+                <ScalarProperty Name="Keyword" ColumnName="Keyword" />
+                <ScalarProperty Name="KeywordValues" ColumnName="KeywordValues" />
+                <ScalarProperty Name="DeleteConfirm" ColumnName="DeleteConfirm" />
+                <ScalarProperty Name="NewLangRecord" ColumnName="NewLangRecord" />
+                <ScalarProperty Name="UnsavedChanges" ColumnName="UnsavedChanges" />
+                <ScalarProperty Name="FormAdded" ColumnName="FormAdded" />
+                <ScalarProperty Name="FormUpdated" ColumnName="FormUpdated" />
+                <ScalarProperty Name="AdminLanguageCode" ColumnName="AdminLanguageCode" />
+                <ScalarProperty Name="AdminLanguage" ColumnName="AdminLanguage" />
+                <ScalarProperty Name="AdminMenuLangSetup" ColumnName="AdminMenuLangSetup" />
+                <ScalarProperty Name="AdminMenuAccessControl" ColumnName="AdminMenuAccessControl" />
+                <ScalarProperty Name="AdminMenuHeader" ColumnName="AdminMenuHeader" />
+                <ScalarProperty Name="FormError" ColumnName="FormError" />
+                <ScalarProperty Name="Logout" ColumnName="Logout" />
+                <ScalarProperty Name="NewForm" ColumnName="NewForm" />
+                <ScalarProperty Name="LoginSubmit" ColumnName="LoginSubmit" />
+                <ScalarProperty Name="LoginPassword" ColumnName="LoginPassword" />
+                <ScalarProperty Name="LoginUserName" ColumnName="LoginUserName" />
+                <ScalarProperty Name="AuthOKMsg" ColumnName="AuthOKMsg" />
+                <ScalarProperty Name="AuthNoAccessMsg" ColumnName="AuthNoAccessMsg" />
+                <ScalarProperty Name="AuthErrorMsg" ColumnName="AuthErrorMsg" />
+                <ScalarProperty Name="AuthMsg" ColumnName="AuthMsg" />
+                <ScalarProperty Name="OK" ColumnName="OK" />
+                <ScalarProperty Name="DialogMsg" ColumnName="DialogMsg" />
+                <ScalarProperty Name="BackButton" ColumnName="BackButton" />
+                <ScalarProperty Name="EditButton" ColumnName="EditButton" />
+                <ScalarProperty Name="SubmitButton" ColumnName="SubmitButton" />
+                <ScalarProperty Name="WelcomeMsg" ColumnName="WelcomeMsg" />
+                <ScalarProperty Name="Welcome" ColumnName="Welcome" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="AppTitle" ColumnName="AppTitle" />
+                <ScalarProperty Name="LangName" ColumnName="LangName" />
+                <ScalarProperty Name="LangNameEnglish" ColumnName="LangNameEnglish" />
+                <ScalarProperty Name="Lang1" ColumnName="Lang" />
+                <ScalarProperty Name="lid" ColumnName="lid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
